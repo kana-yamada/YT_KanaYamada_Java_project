@@ -1,0 +1,88 @@
+/* ======= レイアウト全体 ======= */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #a1d6e2;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ======= サイドバー ======= */
+.sidebar {
+  position: relative;   /* absoluteとセット */
+  width: 150px;
+  background: #fff;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  color: #333;
+  text-decoration: none;
+}
+
+.sidebar a:hover {
+  background: #e0e0e0;
+}
+
+/* ======= 本棚アイコン ======= */
+.bookshelf-icon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%; /* 横幅の50%の位置 */
+  transform: translateX(-50%); /* アイコン幅の半分ずらして中央揃え */
+  width: 80px;
+  opacity: 0.9;
+  pointer-events: none; /* タッチ操作防止 */
+}
+
+/* ======= メインコンテンツ ======= */
+.main {
+    flex: 1;
+    background-color: #a1d6e2;
+    padding: 20px;
+}
+
+.main h1 {
+    margin-bottom: 20px;
+}
+
+/* メモ一覧アイテム */
+.memo-item {
+    background-color: #fff;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.memo-title {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.memo-meta {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+}
+
+.memo-content {
+    margin-top: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* 本文を2行で省略 */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

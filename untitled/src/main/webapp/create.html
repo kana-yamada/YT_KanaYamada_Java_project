@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/create.css">
+<head>
+  <meta charset="UTF-8">
+  <title>新規メモ作成</title>
+</head>
+
+<body class="create-page">
+<div class="layout">
+  <div class="sidebar">
+    <h2>メニュー</h2>
+    <a href="home.html">ホーム</a>
+    <a href="create.html">新規作成</a>
+    <a href="login.html">ログアウト</a>
+    <div class="sidebar-bookshelf">
+      <img src="image/aisome_bookshelf_mono.png"
+           alt="本棚アイコン"
+           class="bookshelf-icon">
+    </div>
+  </div>
+
+  <div class="main">
+    <!-- ▼ カバー（メイン先頭いっぱい） -->
+    <section class="cover">
+      <img id="coverImg" alt="カバー画像" />
+      <div class="cover-actions">
+        <label class="cover-button">
+          カバー画像を選択
+          <input type="file" id="coverInput" accept="image/*" hidden>
+        </label>
+      </div>
+    </section>
+    <!-- ▲ カバー -->
+
+    <div class="container">
+      <h1>新規メモ作成</h1>
+      <form action="#" method="post" class="form-card" enctype="multipart/form-data">
+        <input type="text" name="title" placeholder="タイトル" required>
+        <textarea name="content" placeholder="本文" rows="5" required></textarea>
+        <select name="category">
+          <option value="">カテゴリを選択</option>
+          <option value="novel">小説</option>
+          <option value="business">ビジネス</option>
+          <option value="other">その他</option>
+        </select>
+
+        <!-- 画像添付 -->
+        <input type="file" id="imageUpload" name="image" accept="image/*" class="input-file">
+        <button type="submit" class="btn">追加</button>
+      </form>
+
+      <!-- 添付画像プレビュー -->
+      <div id="preview-area"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // 選んだ画像を本文下にプレビュー表示
+  const imageInput = document.getElementById("imageUpload");
+  const previewArea = document.getElementById("preview-area");
+
+  imageInput.addEventListener("change", e => {
+    previewArea.innerHTML = ""; // リセット
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    img.className = "preview-img";
+    previewArea.appendChild(img);
+  });
+</script>
+</body>
+</html>

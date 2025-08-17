@@ -1,0 +1,81 @@
+.create-page .cover {
+  position: relative;
+  width: 100%;
+  /* 画面に応じて高さ可変：最小200px、最大420px、基準は32vh */
+  height: clamp(200px, 32vh, 420px);
+  background: #f3f3f3; /* 画像未選択時のプレースホルダー */
+  border-bottom: 1px solid #e5e5e5;
+  overflow: hidden;
+}
+
+.create-page .cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* 横いっぱい・はみ出し部分はトリム */
+  display: block;
+  opacity: 0;            /* 未選択時は透明にして背景色を見せる */
+  transition: opacity 200ms ease;
+}
+
+/* 右下のコントロールエリア */
+.create-page .cover .cover-actions {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  gap: 8px;
+}
+
+/* カバー画像の選択ボタン */
+.create-page .cover .cover-button {
+  font: inherit;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: rgba(255,255,255,0.9);
+  cursor: pointer;
+  user-select: none;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+.create-page .cover .cover-button:hover {
+  background: #fff;
+  border-color: #cfcfcf;
+}
+
+/* 入力系のちょい整え（念のため）*/
+.create-page .form-card .field {
+  display: block;
+  margin: 12px 0;
+}
+
+/* main直下のcontainerの上マージン */
+.create-page .container {
+  margin-top: 20px;
+}
+
+#preview-area {
+  margin-top: 15px;
+}
+
+.preview-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.input-file {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  background: #f9f9f9;
+  cursor: pointer;
+}
+
+.input-file:hover {
+  background: #f0f0f0;
+}

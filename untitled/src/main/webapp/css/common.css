@@ -1,0 +1,47 @@
+/* ======= 共通ベース ======= */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:hover {
+  text-decoration: none;
+  background-color: #808080;
+}
+
+/* ======= ボタン共通 ======= */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  background: #34888c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* ======= 入力欄共通 ======= */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

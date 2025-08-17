@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/layout.css">
+<head>
+    <meta charset="UTF-8">
+    <title>メモ編集</title>
+</head>
+<body>
+<div class="layout">
+    <div class="sidebar">
+        <h2>メニュー</h2>
+        <a href="home.html">ホーム</a>
+        <a href="create.html">新規作成</a>
+        <a href="login.html">ログアウト</a>
+        <div class="sidebar-bookshelf">
+            <img src="image/aisome_bookshelf_mono.png"
+                 alt="本棚アイコン"
+                 class="bookshelf-icon">
+        </div>
+    </div>
+    <div class="main">
+        <div class="container">
+            <h1>メモ編集</h1>
+            <form action="#" method="post" class="form-card">
+                <input type="text" name="title" value="サンプル本" required>
+                <textarea name="content" rows="5" required>ここに既存の内容が入ります。</textarea>
+                <select name="category">
+                    <option value="novel" selected>小説</option>
+                    <option value="business">ビジネス</option>
+                    <option value="other">その他</option>
+                </select>
+                <button type="submit" class="btn">更新</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

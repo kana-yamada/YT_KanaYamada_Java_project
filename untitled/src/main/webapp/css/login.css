@@ -1,0 +1,19 @@
+/* ======= フォーム中央配置 ======= */
+.center-form {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.center-form h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.center-form .btn {
+  width: 100%;
+  margin-top: 15px;
+}
